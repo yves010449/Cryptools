@@ -16,6 +16,6 @@ public class Movement : MonoBehaviour
         this.movement = movementInput;
     }
     private void FixedUpdate() {
-        rb.velocity =  speed * movement;
+        rb.velocity =  speed * movement * Time.fixedDeltaTime;
     }
 }

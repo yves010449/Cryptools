@@ -7,8 +7,10 @@ public class Detector : MonoBehaviour
     private void Update() {
         
     }
-    
-    private void OnCollisionEnter2D(Collision2D collision) {
+
+    public void OnCollisionEnter2D(Collision2D collision) {
         Debug.Log("hit" + collision.gameObject.name);
+        Debug.Log("sa");
     }
+   
 }

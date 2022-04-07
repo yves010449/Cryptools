@@ -139,3 +139,21 @@ Received Import Request.
   path: Assets/Scenes/SADa.unity
   artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Scenes/SADa.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14554875c98ce28611a69c75a294c455') in 0.042047 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 537.777814 seconds.
+  path: Assets/Scenes/SampleScene.scenetemplate
+  artifactKey: Guid(a0bbbb5490d033d4dab504f77e835279) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/SampleScene.scenetemplate using Guid(a0bbbb5490d033d4dab504f77e835279) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '238313d762f67ec4588e389077c1a3cc') in 0.181821 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 33.037997 seconds.
+  path: Assets/Scenes/New Scene.unity
+  artifactKey: Guid(210dbf9984e58824cb62032eeb0e34a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/New Scene.unity using Guid(210dbf9984e58824cb62032eeb0e34a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '875302c17023f3970184831e24b505f0') in 0.009061 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2051.266147 seconds.
+  path: Assets/Test.unity
+  artifactKey: Guid(594f5fe8b3c1c6144a59277c1dc9a1e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Test.unity using Guid(594f5fe8b3c1c6144a59277c1dc9a1e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05c080ffdbae480289ca4f7cd29cabcf') in 0.014071 seconds 

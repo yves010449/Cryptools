@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6207033972950815430}
   - component: {fileID: 8957582554039812888}
   - component: {fileID: 4341775946958386437}
-  - component: {fileID: 4793523405984365439}
   m_Layer: 6
   m_Name: Stone
   m_TagString: Untagged
@@ -71,7 +70,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1822890643
+  m_SortingLayerID: 834867531
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 22b907c2b0239f14abe35482e56a8f9a, type: 3}
@@ -101,22 +100,3 @@ CapsuleCollider2D:
   m_Offset: {x: 0.031124344, y: -0.11491455}
   m_Size: {x: 2.121925, y: 1.2930825}
   m_Direction: 1
---- !u!251 &4793523405984365439
-PlatformEffector2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3961507458102465212}
-  m_Enabled: 1
-  m_UseColliderMask: 1
-  m_ColliderMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RotationalOffset: 0.54
-  m_UseOneWay: 1
-  m_UseOneWayGrouping: 0
-  m_SurfaceArc: 178.24
-  m_UseSideFriction: 0
-  m_UseSideBounce: 0
-  m_SideArc: 0

@@ -20,9 +20,19 @@ public class AnimationController : MonoBehaviour
         else {
             animator.SetBool("isMoving", false);
         }
+    }
 
+    private void FixedUpdate() {
+        lastPosition();
     }
     public void Move(Vector2 movementInput) {
         this.movement = movementInput;
+    }
+
+    public void lastPosition() {
+        if(movement.x == 1 || movement.x == -1 || movement.y == 1|| movement.y == -1) {
+            animator.SetFloat("LastHorizontal", movement.x);
+            animator.SetFloat("LastVertical", movement.y);
+        }
     }
 }

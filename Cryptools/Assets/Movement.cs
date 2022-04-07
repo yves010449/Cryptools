@@ -15,7 +15,10 @@ public class Movement : MonoBehaviour
     public void Move(Vector2 movementInput) {
         this.movement = movementInput;
     }
+    
+
+
     private void FixedUpdate() {
-        rb.velocity =  speed * movement * Time.fixedDeltaTime;
+        rb.velocity =  speed * movement * Time.fixedDeltaTime;      
     }
 }

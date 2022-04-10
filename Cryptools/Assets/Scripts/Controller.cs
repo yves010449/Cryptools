@@ -7,6 +7,7 @@ public class Controller : MonoBehaviour
     public Movement movement;
     public AnimationController AnimController;
     public Interactor interactor;
+    public Tools tool;
 
     private void Awake() {
         if(movement == null) {
@@ -18,6 +19,9 @@ public class Controller : MonoBehaviour
         if (interactor == null) {
             GetComponent<Interactor>();
         }
+        if(tool == null) {
+            GetComponent<Tools>();
+        }
     }
     public void HandleMovement(Vector2 movement) {
         this.movement.Move(movement);
@@ -27,5 +31,6 @@ public class Controller : MonoBehaviour
     }
     public void HandleRotation(Vector2 movement) {
         interactor.Rotate(movement);
+        tool.Rotate(movement);
     }
 }

@@ -350,6 +350,8 @@
 "Assets/Scripts/Interactor.cs"
 "Assets/Scripts/Movement.cs"
 "Assets/Scripts/PlayerInput.cs"
+"Assets/ToolAnimationController.cs"
+"Assets/Tools.cs"
 -langversion:8.0
 
 /deterministic

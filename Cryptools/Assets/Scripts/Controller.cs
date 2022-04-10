@@ -30,7 +30,6 @@ public class Controller : MonoBehaviour
         AnimController.Move(movement);
     }
     public void HandleRotation(Vector2 movement) {
-        interactor.Rotate(movement);
-        tool.Rotate(movement);
+        interactor.Rotate(movement);  
     }
 }

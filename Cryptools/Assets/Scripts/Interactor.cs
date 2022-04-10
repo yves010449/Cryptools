@@ -17,19 +17,15 @@ public class Interactor : MonoBehaviour
     private void FixedUpdate() {
         if (movementInput.x > 0) {
             interactor.localRotation = Quaternion.Euler(0, 0, 90);
-            interactor.localPosition = new Vector3((float)0.5, (float)-0.5, 0);
         }
         if (movementInput.x < 0) {
             interactor.localRotation = Quaternion.Euler(0, 0, -90);
-            interactor.localPosition = new Vector3((float)-0.5, (float)-0.5, 0);
         }
         if (movementInput.y > 0) {
              interactor.localRotation = Quaternion.Euler(0, 0, 180);
-            interactor.localPosition = new Vector3(0, 0, 0);
         }
         if (movementInput.y < 0) {
             interactor.localRotation = Quaternion.Euler(0, 0, 0);
-            interactor.localPosition = new Vector3(0, -1, 0);
         }
     }
 }

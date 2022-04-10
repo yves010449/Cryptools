@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6207033972950815430}
   - component: {fileID: 8957582554039812888}
   - component: {fileID: 4341775946958386437}
+  - component: {fileID: 4965271079505005110}
   m_Layer: 6
   m_Name: Stone
   m_TagString: Untagged
@@ -95,8 +96,29 @@ CapsuleCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 1
+  m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.031124344, y: -0.11491455}
   m_Size: {x: 2.121925, y: 1.2930825}
   m_Direction: 1
+--- !u!50 &4965271079505005110
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3961507458102465212}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

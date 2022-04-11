@@ -7,7 +7,7 @@ public class Controller : MonoBehaviour
     public Movement movement;
     public AnimationController AnimController;
     public Interactor interactor;
-    public Tools tool;
+    public Detector detector;
 
     private void Awake() {
         if(movement == null) {
@@ -19,8 +19,8 @@ public class Controller : MonoBehaviour
         if (interactor == null) {
             GetComponent<Interactor>();
         }
-        if(tool == null) {
-            GetComponent<Tools>();
+        if(detector == null) {
+            GetComponent<Detector>();
         }
     }
     public void HandleMovement(Vector2 movement) {
@@ -30,6 +30,10 @@ public class Controller : MonoBehaviour
         AnimController.Move(movement);
     }
     public void HandleRotation(Vector2 movement) {
-        interactor.Rotate(movement);  
+        detector.Rotate(movement);  
     }
+    public void HandleDetector() {
+        detector.DetectResource();
+    } 
+    
 }

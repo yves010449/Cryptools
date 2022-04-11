@@ -35,4 +35,11 @@ public class AnimationController : MonoBehaviour
             animator.SetFloat("LastVertical", movement.y);
         }
     }
+    public void PlayMiningAnimtion() {
+        animator.SetBool("isMining",true);
+    }
+    public void StopMiningAnimation() {
+        Debug.Log("asda");
+        animator.SetBool("isMining", false);
+    }
 }

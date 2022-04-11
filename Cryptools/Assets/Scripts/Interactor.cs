@@ -12,15 +12,9 @@ public class Interactor : MonoBehaviour
     }
 
     public void getDetectedObject(GameObject resource) {
+
         if (resource.CompareTag("Rock") && resource != null) {
-            Debug.Log("Mining my own business");
-            Destroy(resource, 2.2f);
+            resource.gameObject.GetComponent<Stone>().Hit();    
         }
     }
-
-
-
-
-
-
 }

@@ -39,8 +39,6 @@ public class Detector : MonoBehaviour
 
     public void DetectResource() {
         
-        Debug.Log("clcik");
-        
         if (hit) {
             Debug.Log(hit.collider.tag);
             OnInteract?.Invoke(hit.collider.gameObject);

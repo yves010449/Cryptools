@@ -39,7 +39,6 @@ public class AnimationController : MonoBehaviour
         animator.SetBool("isMining",true);
     }
     public void StopMiningAnimation() {
-        Debug.Log("asda");
         animator.SetBool("isMining", false);
     }
 }

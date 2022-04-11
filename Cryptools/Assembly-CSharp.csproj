@@ -61,11 +61,11 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Detector.cs" />
     <Compile Include="Assets\Scripts\AnimationController.cs" />
+    <Compile Include="Assets\Stone.cs" />
     <Compile Include="Assets\Scripts\Movement.cs" />
     <Compile Include="Assets\Scripts\Interactor.cs" />
     <Compile Include="Assets\Scripts\Controller.cs" />
     <Compile Include="Assets\Scripts\PlayerInput.cs" />
-    <Compile Include="Assets\Stone.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

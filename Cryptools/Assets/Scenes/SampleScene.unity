@@ -2405,37 +2405,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 346850b3f90772744990898c663eb1c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rock:
-    serializedVersion: 2
-    m_Bits: 64
-  range: 1
-  OnInteract:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1165752940}
-        m_TargetAssemblyTypeName: AnimationController, Assembly-CSharp
-        m_MethodName: PlayMiningAnimtion
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 231393286}
-        m_TargetAssemblyTypeName: Interactor, Assembly-CSharp
-        m_MethodName: getDetectedObject
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!61 &231393285
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4051,7 +4020,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 2.4037268, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -11862,13 +11831,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1165752932}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a9e871f7b9b4244b970f5fc16c43daa, type: 3}
+  m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  movement: {fileID: 1165752936}
-  AnimController: {fileID: 1165752940}
-  interactor: {fileID: 0}
-  detector: {fileID: 231393284}
 --- !u!114 &1165752936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11881,7 +11846,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da325d805ea9bfe438d0ed810902b9e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 150
 --- !u!50 &1165752937
 Rigidbody2D:
   serializedVersion: 4
@@ -11920,7 +11884,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.85, y: 1.54}
+    oldSize: {x: 1.46, y: 1.97}
     newSize: {x: 0.85, y: 1.54}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -11960,7 +11924,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d701ff6bd741e50419a2c115e1cae73f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 1165752939}
 --- !u!4 &1166742812 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6207033972950815430, guid: 40fecf6b85f6ea1448689039595d0d79, type: 3}
@@ -46522,72 +46485,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b93e2a8a50c683344b709af51ec0ef19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnMove:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1165752935}
-        m_TargetAssemblyTypeName: Controller, Assembly-CSharp
-        m_MethodName: HandleMovement
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1165752940}
-        m_TargetAssemblyTypeName: AnimationController, Assembly-CSharp
-        m_MethodName: Move
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1165752935}
-        m_TargetAssemblyTypeName: Controller, Assembly-CSharp
-        m_MethodName: HandleRotation
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1165752935}
-        m_TargetAssemblyTypeName: Controller, Assembly-CSharp
-        m_MethodName: HandleRotation
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnMouseClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1165752935}
-        m_TargetAssemblyTypeName: Controller, Assembly-CSharp
-        m_MethodName: HandleDetector
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!4 &1640478068
 Transform:
   m_ObjectHideFlags: 0

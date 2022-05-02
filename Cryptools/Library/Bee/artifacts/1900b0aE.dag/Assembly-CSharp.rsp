@@ -344,6 +344,12 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/VSSettingsProvider.ref.dll"
+"Assets/Scripts/AnimationController.cs"
+"Assets/Scripts/Controller.cs"
+"Assets/Scripts/Detector.cs"
+"Assets/Scripts/Interactor.cs"
+"Assets/Scripts/Movement.cs"
+"Assets/Scripts/PlayerInput.cs"
 "Assets/Stone.cs"
 -langversion:8.0
 

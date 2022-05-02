@@ -2405,6 +2405,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 346850b3f90772744990898c663eb1c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Rock:
+    serializedVersion: 2
+    m_Bits: 0
+  range: 0
+  OnInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &231393285
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11741,7 +11748,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1165752934}
-  - component: {fileID: 1165752935}
+  - component: {fileID: 1165752943}
+  - component: {fileID: 1165752942}
+  - component: {fileID: 1165752941}
   - component: {fileID: 1165752940}
   - component: {fileID: 1165752936}
   - component: {fileID: 1165752933}
@@ -11822,18 +11831,6 @@ Transform:
   m_Father: {fileID: 1640478068}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1165752935
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1165752932}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1165752936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11846,6 +11843,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da325d805ea9bfe438d0ed810902b9e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 10
 --- !u!50 &1165752937
 Rigidbody2D:
   serializedVersion: 4
@@ -11884,7 +11882,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.46, y: 1.97}
+    oldSize: {x: 0.85, y: 1.54}
     newSize: {x: 0.85, y: 1.54}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -11924,6 +11922,56 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d701ff6bd741e50419a2c115e1cae73f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+--- !u!114 &1165752941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165752932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 346850b3f90772744990898c663eb1c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rock:
+    serializedVersion: 2
+    m_Bits: 0
+  range: 0
+  OnInteract:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1165752942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165752932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae70c37e49b54ad449a9a438031a4a81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1165752943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165752932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b93e2a8a50c683344b709af51ec0ef19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnMove:
+    m_PersistentCalls:
+      m_Calls: []
+  OnMouseClick:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1166742812 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6207033972950815430, guid: 40fecf6b85f6ea1448689039595d0d79, type: 3}
@@ -46485,6 +46533,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b93e2a8a50c683344b709af51ec0ef19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnMove:
+    m_PersistentCalls:
+      m_Calls: []
+  OnMouseClick:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1640478068
 Transform:
   m_ObjectHideFlags: 0

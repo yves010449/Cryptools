@@ -24,6 +24,6 @@ public class Stone : MonoBehaviour {
         requiredHits--;
     }
     public void DestroyRock() {
-        Destroy(gameObject);
+        Destroy(gameObject,0.9f);
     }
 }

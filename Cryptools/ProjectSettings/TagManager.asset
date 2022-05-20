@@ -13,8 +13,8 @@ TagManager:
   - 
   - Water
   - UI
-  - Resource
-  - 
+  - Blocking
+  - Creatures
   - 
   - 
   - 
@@ -43,9 +43,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Background
-    uniqueID: 1764202355
+  - name: Floor
+    uniqueID: 180513031
     locked: 0
-  - name: Foreground
-    uniqueID: 834867531
+  - name: Creatures
+    uniqueID: 3319721781
+    locked: 0
+  - name: Interactable
+    uniqueID: 3033148201
     locked: 0

@@ -56,16 +56,9 @@
     <Analyzer Include="D:\Softwares\VisualStudio\IDE\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Collidable.cs" />
-    <Compile Include="Assets\Scripts\Detector.cs" />
-    <Compile Include="Assets\Scripts\CameraMotor.cs" />
-    <Compile Include="Assets\Scripts\AnimationController.cs" />
-    <Compile Include="Assets\Scripts\Movement.cs" />
-    <Compile Include="Assets\Scripts\Interactor.cs" />
-    <Compile Include="Assets\Scripts\Player.cs" />
-    <Compile Include="Assets\Scripts\Controller.cs" />
-    <Compile Include="Assets\Scripts\Stone.cs" />
-    <Compile Include="Assets\Scripts\PlayerInput.cs" />
+    <Compile Include="Assets\Res\Creatures\Player\scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Res\Objects\Stone\scripts\StoneBehavior.cs" />
+    <Compile Include="Assets\Res\UI\CameraController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

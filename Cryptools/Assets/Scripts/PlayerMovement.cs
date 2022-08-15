@@ -17,15 +17,6 @@ public class PlayerMovement : MonoBehaviour
     Vector2 rayCastDirection;
     Vector2 movement;
     RaycastHit2D hit;
-    Inventory inventory;
-
-    [SerializeField] GameplayInventory gameInventory;
-
-    private void Awake()
-    {
-        inventory = new Inventory();
-        gameInventory.SetInventory(inventory);
-    }
 
     // Update is called once per frame
     void Update()

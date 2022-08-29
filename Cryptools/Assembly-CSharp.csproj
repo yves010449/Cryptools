@@ -61,6 +61,9 @@
     <Compile Include="Assets\Scripts\DayNightScript.cs" />
     <Compile Include="Assets\Scripts\StoneBehavior.cs" />
     <Compile Include="Assets\Res\UI\CameraController.cs" />
+    <Compile Include="Assets\Scripts\Inventory\UIInventoryPage.cs" />
+    <Compile Include="Assets\Scripts\Inventory\UIInventoryItem.cs" />
+    <Compile Include="Assets\Scripts\Inventory\InventoryController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

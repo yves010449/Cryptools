@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,7 +11,21 @@ public class UIInventoryPage : MonoBehaviour
     [SerializeField]
     private RectTransform contentPanel;
 
+    [SerializeField] MouseFollower mouseFollower;
+
     List<UIInventoryItem> listOfUIItems = new List<UIInventoryItem>();
+
+    private int currentlyDraggedItemIndex = -1;
+
+    public event Action<int> OnItemActionRequested, OnStartDragging;
+
+    public event Action<int, int> OnSwapItems;
+
+    private void Awake()
+    {
+        Hide();
+        mouseFollower.Toggle(false);
+    }
 
     public void InitializeInventoryUI(int inventorySize)
     {
@@ -27,6 +42,14 @@ public class UIInventoryPage : MonoBehaviour
         }
     }
 
+    public void UpdateData(int itemIndex, Sprite itemImage, int itemQuantity)
+    {
+        if (listOfUIItems.Count > itemIndex)
+        {
+            listOfUIItems[itemIndex].SetData(itemImage, itemQuantity);
+        }
+    }
+
     private void HandleShowItemActions(UIInventoryItem inventoryItemUI)
     {
 
@@ -34,24 +57,46 @@ public class UIInventoryPage : MonoBehaviour
 
     private void HandleEndDrag(UIInventoryItem inventoryItemUI)
     {
-    
+        ResetDraggedItem();
     }
 
     private void HandleSwap(UIInventoryItem inventoryItemUI)
     {
-       
+        int index = listOfUIItems.IndexOf(inventoryItemUI);
+        Debug.Log(index);
+        if (index == -1)
+        {
+            return;
+        }
+        OnSwapItems?.Invoke(currentlyDraggedItemIndex, index);
+    }
+
+    private void ResetDraggedItem()
+    {
+        mouseFollower.Toggle(false);
+        currentlyDraggedItemIndex = -1;
     }
 
     private void HandleBeginDrag(UIInventoryItem inventoryItemUI)
     {
-        
+        int index = listOfUIItems.IndexOf(inventoryItemUI);
+        Debug.Log(index);
+        if (index == -1)
+            return;
+        currentlyDraggedItemIndex = index;
+        OnStartDragging?.Invoke(index);
+    }
+
+    public void CreateDraggedItem(Sprite sprite, int quantity)
+    {
+        mouseFollower.Toggle(true);
+        mouseFollower.SetData(sprite, quantity);
     }
 
     private void HandleItemSelection(UIInventoryItem inventoryItemUI)
     {
-        Debug.Log("Clicked!");
-    }
 
+    }
 
     public void Show()
     {
@@ -61,6 +106,7 @@ public class UIInventoryPage : MonoBehaviour
     public void Hide()
     {
         gameObject.SetActive(false);
+        ResetDraggedItem();
     }
 
 }

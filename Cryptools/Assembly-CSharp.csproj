@@ -67,7 +67,8 @@
     <Compile Include="Assets\Scripts\Inventory\UI\UIInventoryItem.cs" />
     <Compile Include="Assets\Scripts\Inventory\Model\ItemSO.cs" />
     <Compile Include="Assets\Scripts\Inventory\Model\InventorySO.cs" />
-    <Compile Include="Assets\Data\NewPlayableBehaviour.cs" />
+    <Compile Include="Assets\Scripts\Inventory\PickUpSystem\Item.cs" />
+    <Compile Include="Assets\Scripts\Inventory\PickUpSystem\PickUpSystem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

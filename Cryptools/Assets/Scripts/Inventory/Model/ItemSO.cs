@@ -11,6 +11,9 @@ namespace Inventory.Model
         [field: SerializeField]
         public bool IsStackable { get; set; }
 
+        [field: SerializeField]
+        public bool IsCraftable { get; set; }
+
         public int ID => GetInstanceID();
 
         [field: SerializeField]
@@ -21,6 +24,13 @@ namespace Inventory.Model
 
         [field: SerializeField]
         public Sprite ItemImage { get; set; }
+
+        [field: SerializeField]
+        public List<ItemSO> CraftingItems { get; set; }
+
+        [field: SerializeField]
+        public List<int> CraftingAmount { get; set; }
+
         /*
         [field: SerializeField]
         public List<ItemParameter> DefaultParametersList { get; set; }

@@ -82,6 +82,7 @@ namespace Inventory.UI
         private void HandleBeginDrag(UIInventoryItem inventoryItemUI)
         {
             int index = listOfUIItems.IndexOf(inventoryItemUI);
+            Debug.Log("Returned!");
             Debug.Log(index);
             if (index == -1)
                 return;

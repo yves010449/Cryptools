@@ -98,7 +98,7 @@ namespace Inventory.UI
 
         private void HandleItemSelection(UIInventoryItem inventoryItemUI)
         {
-
+            
         }
 
         public void Show()

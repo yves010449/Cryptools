@@ -13,6 +13,9 @@ namespace Inventory
         private UIInventoryPage inventoryUI;
 
         [SerializeField]
+        private CraftingManager craftingUI;
+
+        [SerializeField]
         private InventorySO inventoryData;
 
         public List<InventoryItem> initialItems = new List<InventoryItem>();
@@ -81,9 +84,12 @@ namespace Inventory
                     {
                         inventoryUI.UpdateData(item.Key, item.Value.item.ItemImage, item.Value.quantity);
                     }
+                    craftingUI.InitializeCraftableItems();
+                    craftingUI.UpdateCraftableItems();
                 }
                 else
                 {
+                    craftingUI.ResetCraftableItems();
                     inventoryUI.Hide();
                 }
             }

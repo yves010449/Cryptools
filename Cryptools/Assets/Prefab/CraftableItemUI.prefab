@@ -12,6 +12,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 8fa54189b6ea5344582f50347c7b7682, type: 3}
     - target: {fileID: 1383638766878226189, guid: 9c962b894e820074d87f8d3ba79e0f08, type: 3}
+      propertyPath: m_text
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1383638766878226189, guid: 9c962b894e820074d87f8d3ba79e0f08, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
@@ -105,7 +109,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5757934764244929528, guid: 9c962b894e820074d87f8d3ba79e0f08, type: 3}
       propertyPath: m_Name
-      value: ItemUI
+      value: CraftableItemUI
       objectReference: {fileID: 0}
     - target: {fileID: 8421657145700773023, guid: 9c962b894e820074d87f8d3ba79e0f08, type: 3}
       propertyPath: m_Delegates.Array.size

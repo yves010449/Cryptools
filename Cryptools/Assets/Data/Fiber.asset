@@ -21,3 +21,4 @@ MonoBehaviour:
   - {fileID: 11400000}
   - {fileID: 11400000, guid: de3aff39d687d9f4cb276bb4fca7b931, type: 2}
   <CraftingAmount>k__BackingField: 0a0000000f000000
+  <CraftingAvailability>k__BackingField: 0101

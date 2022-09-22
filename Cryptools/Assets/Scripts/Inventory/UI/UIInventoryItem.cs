@@ -18,6 +18,8 @@ namespace Inventory.UI
         [SerializeField]
         private Image borderImage;
 
+        public bool craftableUI = false;
+
         public event Action<UIInventoryItem> OnItemClicked,
             OnItemDroppedOn, OnItemBeginDrag, OnItemEndDrag,
             OnRightMouseBtnClick;
@@ -44,6 +46,11 @@ namespace Inventory.UI
             itemImage.sprite = sprite;
             quantityTxt.text = quantity + "";
             empty = false;
+        }
+
+        public void RemoveSlot()
+        {
+            Destroy(gameObject);
         }
 
         public void Select()

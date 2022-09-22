@@ -17,5 +17,7 @@ MonoBehaviour:
   <MaxStackSize>k__BackingField: 99
   <Name>k__BackingField: Stone
   <ItemImage>k__BackingField: {fileID: 21300000, guid: e01582ada1f29304c893948e91182599, type: 3}
-  <CraftingItems>k__BackingField: []
-  <CraftingAmount>k__BackingField: 
+  <CraftingItems>k__BackingField:
+  - {fileID: 11400000, guid: 3d920c94f17c8604d97b520b8aba581f, type: 2}
+  <CraftingAmount>k__BackingField: 03000000
+  <CraftingAvailability>k__BackingField: 00

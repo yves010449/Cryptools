@@ -31,6 +31,9 @@ namespace Inventory.Model
         [field: SerializeField]
         public List<int> CraftingAmount { get; set; }
 
+        [field: SerializeField]
+        public List<bool> CraftingAvailability { get; set; }
+
         /*
         [field: SerializeField]
         public List<ItemParameter> DefaultParametersList { get; set; }

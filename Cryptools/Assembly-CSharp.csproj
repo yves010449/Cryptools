@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\PerlinNoiseMap.cs" />
     <Compile Include="Assets\Scripts\Inventory\UI\CraftingManager.cs" />
     <Compile Include="Assets\Scripts\Inventory\Model\InventorySO.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />

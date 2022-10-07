@@ -5,6 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    [SerializeField]
+    public UITools uiTools;
+
+    public void Start()
+    {
+        uiTools.InitAvailableTools();
+    }
 
     public void PlayGame()
     {

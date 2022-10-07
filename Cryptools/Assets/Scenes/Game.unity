@@ -1357,6 +1357,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryData: {fileID: 11400000, guid: 35901642cd10a25429975c43f64b7f3a, type: 2}
+--- !u!114 &637676883 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1113080382580839837, guid: fb7ae410cd8068242be63f51353a7510, type: 3}
+  m_PrefabInstance: {fileID: 1113080381353780772}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637676879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36d41040c302e04408ae54f29f78aa2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &735125079 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1113080380981606515, guid: fb7ae410cd8068242be63f51353a7510, type: 3}
@@ -2974,9 +2985,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3d050aea7f792346867f8f8b0ffd0f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 637676883}
   prefabPlains: {fileID: 2739714393881434744, guid: c199196862080294aa00f6d352710586, type: 3}
   prefabForest: {fileID: 6158821710720174206, guid: ff1c911dc046a0440bdff9de2d1bd162, type: 3}
-  magnification: 4.53
+  renderDistance: 4
+  renderOffset: 4
+  magnification: 7
+  xOffset: 1000
+  yOffset: 1000
 --- !u!4 &2054677214
 Transform:
   m_ObjectHideFlags: 0

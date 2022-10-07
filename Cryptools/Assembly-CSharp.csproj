@@ -59,10 +59,13 @@
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\PerlinNoiseMap.cs" />
     <Compile Include="Assets\Scripts\Inventory\UI\CraftingManager.cs" />
+    <Compile Include="Assets\Scripts\NFTSelection\UISelectedTool.cs" />
     <Compile Include="Assets\Scripts\Inventory\Model\InventorySO.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Inventory\UI\MouseFollower.cs" />
     <Compile Include="Assets\Scripts\DayNightScript.cs" />
+    <Compile Include="Assets\Scripts\NFTSelection\UITool.cs" />
+    <Compile Include="Assets\Scripts\NFTSelection\UITools.cs" />
     <Compile Include="Assets\Scripts\StoneBehavior.cs" />
     <Compile Include="Assets\Res\UI\CameraController.cs" />
     <Compile Include="Assets\Scripts\Inventory\UI\UIInventoryPage.cs" />
@@ -71,6 +74,7 @@
     <Compile Include="Assets\Scripts\Inventory\UI\InventoryController.cs" />
     <Compile Include="Assets\Scripts\Inventory\PickUpSystem\PickUpSystem.cs" />
     <Compile Include="Assets\Scripts\Inventory\UI\UIInventoryItem.cs" />
+    <Compile Include="Assets\Scripts\NFTSelection\NFTCollectionsSO.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

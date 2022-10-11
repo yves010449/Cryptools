@@ -7,10 +7,9 @@ using UnityEngine.UI;
 
 public class UITool : MonoBehaviour, IPointerClickHandler
 {
-    public Sprite nft;
+    public string name;
     public int type;
 
-    [SerializeField]
     public Image selectionBorder;
 
     public event Action<UITool> OnItemClicked;
@@ -30,9 +29,11 @@ public class UITool : MonoBehaviour, IPointerClickHandler
         selectionBorder.enabled = true;
     }
 
-    public void SetData(Sprite nft)
+    public void SetData(Sprite nft, string name, int type)
     {
         this.transform.Find("ToolNFT").GetComponent<Image>().sprite = nft;
+        this.name = name;
+        this.type = type;
     }
 
     public void OnPointerClick(PointerEventData eventData)

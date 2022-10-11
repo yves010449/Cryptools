@@ -3036,6 +3036,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiTools: {fileID: 2013401694}
+  nftCollection: {fileID: 11400000, guid: c9d34b9cc16da684bbd9c55c170a99ca, type: 2}
+  selectedTool: {fileID: 1036661942}
 --- !u!1 &1950655972
 GameObject:
   m_ObjectHideFlags: 0
@@ -3154,12 +3156,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9d848f9f9a89bc4bb16a907257055e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nftPrefab: {fileID: 1767675091515298739, guid: a61cb5a421831a24a8165c4767ea6041, type: 3}
   contentPanel: {fileID: 1034357202}
-  toolList:
-  - {fileID: 1767675091515298739, guid: a61cb5a421831a24a8165c4767ea6041, type: 3}
-  - {fileID: 1767675091515298739, guid: a61cb5a421831a24a8165c4767ea6041, type: 3}
-  selectedTool: {fileID: 1036661942}
-  sprite: {fileID: 21300000, guid: b322c9a65e5e98846abbb14e7d506d54, type: 3}
+  toolBorders:
+  - {fileID: 21300000, guid: 3ac244d825d485f439af44262266662a, type: 3}
+  - {fileID: 21300000, guid: ecb403a4d3f5b4c4f9a26b64553cd778, type: 3}
+  - {fileID: 21300000, guid: 3598290244213ca41b1ffbf3960d4518, type: 3}
 --- !u!114 &2013401695
 MonoBehaviour:
   m_ObjectHideFlags: 0

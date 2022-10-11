@@ -26,8 +26,6 @@ namespace Inventory.Model
             }
         }
 
-        InventoryItem item = new InventoryItem();
-
         public int AddItem(ItemSO item, int quantity)
         {
             if (item.IsStackable == false)

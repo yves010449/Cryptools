@@ -1,19 +1,29 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu]
-public class NFTCollections : MonoBehaviour
+public class NFTCollectionsSO : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    [SerializeField]
+    public List<Tool> toolList;
+
+    public Tool[] selectedTools = new Tool[3];
+}
+
+[Serializable]
+public struct Tool
+{
+    public string name;
+
+    public Sprite NFT;
+
+    public enum ToolType { 
+        Pickaxe = 0,
+        Axe = 1,
+        Hammer = 2,
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public ToolType toolType;
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,9 +9,22 @@ public class MainMenu : MonoBehaviour
     [SerializeField]
     public UITools uiTools;
 
+    [SerializeField]
+    public NFTCollectionsSO nftCollection;
+
+    [SerializeField]
+    public UISelectedTool selectedTool;
+
     public void Start()
     {
-        uiTools.InitAvailableTools();
+        uiTools.InitAvailableTools(nftCollection);
+        this.uiTools.OnNFTRequest += HandleDescriptionRequest;
+    }
+
+    private void HandleDescriptionRequest(int toolIndex)
+    {
+        selectedTool.SetSelection(nftCollection.toolList[toolIndex].NFT, nftCollection.toolList[toolIndex].name);
+        nftCollection.selectedTools[(int) nftCollection.toolList[toolIndex].toolType] = nftCollection.toolList[toolIndex];
     }
 
     public void PlayGame()

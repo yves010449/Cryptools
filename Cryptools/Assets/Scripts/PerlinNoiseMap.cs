@@ -2,20 +2,26 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class PerlinNoiseMap : MonoBehaviour
 {
-    Dictionary<int, GameObject> tileSet;
-    Dictionary<int, GameObject> tileGroups;
+    public Dictionary<int, GameObject> tileSet;
+    public Dictionary<int, GameObject> tileGroups;
+    public List<string> chunks;
 
     [SerializeField]
     public PlayerMovement player;
 
-    public GameObject prefabPlains;
-    public GameObject prefabForest;
+    public GameObject[] chunkPrefabs;
 
     public int renderDistance = 3;
     public int renderOffset = 4;
+
+    public float timeRemaining = 10;
+    public float timer = 10;
+    public bool timerIsRunning = false;
+    Vector3 lastPos;
 
     //List<List<int>> noiseGrid = new List<List<int>>();
     //List<List<GameObject>> tileGrid = new List<List<GameObject>>();
@@ -26,28 +32,68 @@ public class PerlinNoiseMap : MonoBehaviour
     public float magnification = 7f;
     public float xOffset = 0;
     public float yOffset = 0;
+    public int randomizer = 0;
 
     void Start()
     {
+        magnification = Random.Range(7f, 20f);
+
         //renderOffset = renderDistance / 2;
+        chunks = new List<string>();
+        xOffset = Random.Range(0 - randomizer, randomizer);
+        yOffset = Random.Range(0 - randomizer, randomizer);
         CreateTileset();
         CreateTileGroups();
         GenerateMap();
+        timerIsRunning = true;
+
+        //Debug.Log(chunks.Count);
+        //Debug.Log("counter "+generationCounter);
+
+        StartCoroutine(MapRenderer());
+        
     }
 
     private void Update()
     {
-        if(Input.anyKey)
+        if (timerIsRunning)
         {
-            GenerateMap();
+            if (timeRemaining > 0)
+            {
+                timeRemaining -= Time.deltaTime;
+            }
+            else
+            {
+                lastPos = player.transform.position;
+                timeRemaining = timer;
+            }
         }
+        if (player.transform.position == lastPos)
+        {
+            timerIsRunning = false;
+        }
+        else
+        {
+            timerIsRunning = true;
+        }
+            
+    }
+
+    IEnumerator MapRenderer()
+    {
+        GenerateMap();
+        yield return new WaitForSeconds(.5f);
+        StartCoroutine(MapRenderer());
+        //Debug.Log("counter " + generationCounter);
     }
 
     void CreateTileset()
     {
         tileSet = new Dictionary<int, GameObject>();
-        tileSet.Add(0, prefabPlains);
-        tileSet.Add(1, prefabForest);
+        for (int i = 0; i < chunkPrefabs.Length; i++)
+        {
+            tileSet.Add(i, chunkPrefabs[i]);
+        }
     }
 
     void CreateTileGroups()
@@ -65,6 +111,7 @@ public class PerlinNoiseMap : MonoBehaviour
     bool test = true;
     void GenerateMap()
     {
+        generationCounter++;
         int playerPositionX = Mathf.RoundToInt(player.transform.position.x)/renderOffset;
         int playerPositionY = Mathf.RoundToInt(player.transform.position.y)/renderOffset;
 
@@ -78,21 +125,52 @@ public class PerlinNoiseMap : MonoBehaviour
                     continue;
                 int tileId = GetIdUsingPerlin(x, y);
                 //noiseGrid[x].Add(tileId);
-                generatedTilesX.Add(x);
-                generatedTilesY.Add(y);
+                //generatedTilesX.Add(x);
+                //generatedTilesY.Add(y);
+                chunks.Add(string.Format("tile_x{0}_y{1}", x, y));
                 CreateTileGroups(tileId, x, y);
             }
         }
+        //Debug.Log(chunks.Count);
+        //Debug.Log("Children Count "+ (tileGroups[0].transform.childCount + tileGroups[1].transform.childCount));
+        //Debug.Log(tileGroups.Count);
     }
 
+    int generationCounter = 0;
     private bool CheckIfGenerated(int x, int y)
     {
-        for (int i = 0; i < generatedTilesX.Count; i++)
-        {
-            if (generatedTilesX[i] == x && generatedTilesY[i] == y)
-                return true;
-        }
-        return false;
+        string checker = string.Format("tile_x{0}_y{1}", x, y);
+        //if (chunks.ContainsKey(checker))
+        //{
+        //    Debug.Log(checker + " is Found!");
+        //    return true;
+        //}
+        //Debug.Log(checker + " is not Found!");
+        //return false;
+        //GameObject chunk = null;
+        //string checker = string.Format("tile_x{0}_y{1}", x, y);
+        //for (int i = 0; i < tileGroups.Count; i++)
+        //{
+        //    if (tileGroups[i].GameObject. != null)
+        //    {
+        //        Debug.Log(checker + " is Found!");
+        //        chunk = GameObject.find
+        //    }
+        //    else
+        //    {
+        //        Debug.Log(checker + " is not Found!");
+        //    }
+        //}
+        //if (chunk == null)
+        //    return false;
+        //return true;
+        //for (int i = 0; i < generatedTilesX.Count; i++)
+        //{
+        //    if (generatedTilesX[i] == x && generatedTilesY[i] == y)
+        //        return true;
+        //}
+        //return false;
+        return chunks.Contains(checker);
     }
 
     //void UpdateMap()
@@ -137,7 +215,10 @@ public class PerlinNoiseMap : MonoBehaviour
 
         tile.name = string.Format("tile_x{0}_y{1}", x, y);
         tile.transform.localPosition = new Vector3(x * renderOffset, y * renderOffset, 0);
-
+        //if (chunks.ContainsKey(tile.name))
+        //{
+        //    chunks.Add(tile.name, tile);
+        //}
         //tileGrid[x].Add(tile);
 
         //for (int i = playerPositionX - 1; i < playerPositionX + 1; i++)
@@ -156,12 +237,13 @@ public class PerlinNoiseMap : MonoBehaviour
         //tile.transform.localPosition = new Vector3((x - playerPositionX) * 4, (y - playerPositionY) * 4, 0);
         //tile.transform.localPosition = new Vector3((x + playerPositionX) * 4, (y + playerPositionY) * 4, 0);
 
-
+        /*
         if (test)
         {
             Instantiate(tileSet[0], tileGroups[0].transform).transform.localPosition = new Vector3(-1 * renderOffset, 0 * renderOffset, 0);
             test = false;
         }
+        */
         
     }
 }

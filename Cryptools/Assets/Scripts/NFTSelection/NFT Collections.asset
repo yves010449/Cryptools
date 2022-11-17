@@ -18,7 +18,7 @@ MonoBehaviour:
     toolType: 0
   - name: Axe Test
     NFT: {fileID: 21300000, guid: b2d8c365456070f4284eaa07b5e690ed, type: 3}
-    toolType: 1
+    toolType: 0
   - name: Axe Test 2
     NFT: {fileID: 21300000, guid: b2d8c365456070f4284eaa07b5e690ed, type: 3}
     toolType: 1
@@ -29,12 +29,12 @@ MonoBehaviour:
     NFT: {fileID: 21300000, guid: b2d8c365456070f4284eaa07b5e690ed, type: 3}
     toolType: 2
   selectedTools:
-  - name: Pickaxe Test
-    NFT: {fileID: 21300000, guid: b322c9a65e5e98846abbb14e7d506d54, type: 3}
-    toolType: 0
   - name: Axe Test
     NFT: {fileID: 21300000, guid: b2d8c365456070f4284eaa07b5e690ed, type: 3}
+    toolType: 0
+  - name: Axe Test 2
+    NFT: {fileID: 21300000, guid: b2d8c365456070f4284eaa07b5e690ed, type: 3}
     toolType: 1
-  - name: Axe Test
+  - name: Hammer Test 2
     NFT: {fileID: 21300000, guid: b2d8c365456070f4284eaa07b5e690ed, type: 3}
     toolType: 2

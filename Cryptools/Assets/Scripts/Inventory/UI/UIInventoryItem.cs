@@ -26,6 +26,9 @@ namespace Inventory.UI
 
         private bool empty = true;
 
+        [SerializeField]
+        private AudioSource click;
+
         public void Awake()
         {
             ResetData();
@@ -33,6 +36,8 @@ namespace Inventory.UI
         }
         public void ResetData()
         {
+            if (itemImage == null)
+                return;
             itemImage.gameObject.SetActive(false);
             empty = true;
         }
@@ -42,6 +47,8 @@ namespace Inventory.UI
         }
         public void SetData(Sprite sprite, int quantity)
         {
+            if (itemImage == null)
+                return;
             itemImage.gameObject.SetActive(true);
             itemImage.sprite = sprite;
             quantityTxt.text = quantity + "";
@@ -60,6 +67,9 @@ namespace Inventory.UI
 
         public void OnPointerClick(PointerEventData pointerData)
         {
+            if (empty)
+                return;
+            click.Play();
             if (pointerData.button == PointerEventData.InputButton.Right)
             {
                 OnRightMouseBtnClick?.Invoke(this);
@@ -84,6 +94,7 @@ namespace Inventory.UI
 
         public void OnDrop(PointerEventData eventData)
         {
+            click.Play();
             OnItemDroppedOn?.Invoke(this);
         }
 

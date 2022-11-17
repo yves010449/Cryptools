@@ -124,6 +124,9 @@ GameObject:
   - component: {fileID: 1113080382580839837}
   - component: {fileID: 8569410125132335700}
   - component: {fileID: 1113080382580839836}
+  - component: {fileID: 637676880}
+  - component: {fileID: 637676881}
+  - component: {fileID: 637676887}
   m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
@@ -208,11 +211,11 @@ Rigidbody2D:
   m_GameObject: {fileID: 1113080382580839827}
   m_BodyType: 0
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -247,12 +250,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36d41040c302e04408ae54f29f78aa2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stone: {fileID: 0}
   moveSpeed: 5
   rb: {fileID: 1113080382580839839}
   anim: {fileID: 1113080382580839836}
   rayCastX: 0
   rayCastY: 0
+  attackRate: 2
 --- !u!114 &8569410125132335700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -266,7 +269,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryUI: {fileID: 0}
-  inventorySize: 33
+  craftingUI: {fileID: 0}
+  inventoryData: {fileID: 11400000, guid: 35901642cd10a25429975c43f64b7f3a, type: 2}
+  gameplayUI: {fileID: 0}
+  toolsUI: {fileID: 0}
+  initialItems:
+  - quantity: 10
+    item: {fileID: 11400000, guid: ee5131c84281b9e41a31d144ccbe24c4, type: 2}
 --- !u!95 &1113080382580839836
 Animator:
   serializedVersion: 3
@@ -286,3 +295,43 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &637676880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1113080382580839827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3eed6c28d1dc7884c872eeb0b472eabe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryData: {fileID: 11400000, guid: 35901642cd10a25429975c43f64b7f3a, type: 2}
+--- !u!114 &637676881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1113080382580839827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bb31ab5a6e5ec14996334130316a69d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &637676887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1113080382580839827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b60212bae0c132249b5be9694d329eb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 0
+  healthBar: {fileID: 0}

@@ -6,19 +6,27 @@ using UnityEngine;
 public class Item : MonoBehaviour
 {
     [field: SerializeField]
-    public ItemSO InventoryItem { get; private set; }
+    public ItemSO InventoryItem { get; set; }
 
     [field: SerializeField]
     public int Quantity { get; set; } = 1;
 
-    //[SerializeField]
-    //private AudioSource audioSource;
+    [SerializeField]
+    private AudioSource collect;
 
     [SerializeField]
     private float duration = 0.3f;
 
     private void Start()
     {
+        GetComponent<SpriteRenderer>().sprite = InventoryItem.ItemImage;
+    }
+
+    public void SetData(ItemSO item)
+    {
+        if (item == null)
+            return;
+        InventoryItem = item;
         GetComponent<SpriteRenderer>().sprite = InventoryItem.ItemImage;
     }
 
@@ -31,7 +39,7 @@ public class Item : MonoBehaviour
 
     private IEnumerator AnimateItemPickup()
     {
-        //audioSource.Play();
+        collect.Play();
         Vector3 startScale = transform.localScale;
         Vector3 endScale = Vector3.zero;
         float currentTime = 0;

@@ -1,3 +1,4 @@
+using Inventory.Model;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -15,11 +16,13 @@ namespace Inventory.UI
 
         [SerializeField] MouseFollower mouseFollower;
 
-        List<UIInventoryItem> listOfUIItems = new List<UIInventoryItem>();
+        public List<UIInventoryItem> listOfUIItems = new List<UIInventoryItem>();
 
         private int currentlyDraggedItemIndex = -1;
 
         public event Action<int> OnItemActionRequested, OnStartDragging;
+
+        //public event Action<ItemSO> OnItemCraft;
 
         public event Action<int, int> OnSwapItems;
 
@@ -52,9 +55,23 @@ namespace Inventory.UI
             }
         }
 
+        //public void UpdateGameplayUI()
+        //{
+        //    for (int i = 0; i < 6; i++)
+        //    {
+        //        gameplayUI.UpdateHudSlot(listOfUIItems[i], i);
+        //    }
+        //}
+
         private void HandleShowItemActions(UIInventoryItem inventoryItemUI)
         {
-
+            int index = listOfUIItems.IndexOf(inventoryItemUI);
+            //Debug.Log(index);
+            if (index == -1)
+            {
+                return;
+            }
+            OnItemActionRequested?.Invoke(index);
         }
 
         private void HandleEndDrag(UIInventoryItem inventoryItemUI)
@@ -65,13 +82,40 @@ namespace Inventory.UI
         private void HandleSwap(UIInventoryItem inventoryItemUI)
         {
             int index = listOfUIItems.IndexOf(inventoryItemUI);
-            Debug.Log(index);
+
+            //if (!gameObject.GetComponent<CraftingManager>().craftedItemDragged)
+            //    currentlyDraggedItemIndex = index;
+
+            //Debug.Log(index);
+            //Debug.Log(currentlyDraggedItemIndex);
+
+            //Debug.Log(index);
+            //Debug.Log("C off");
             if (index == -1)
             {
                 return;
             }
             OnSwapItems?.Invoke(currentlyDraggedItemIndex, index);
         }
+
+        //private void HandleCraftItem(UIInventoryItem inventoryItemUI)
+        //{
+        //    //int index = listOfUIItems.IndexOf(inventoryItemUI);
+
+        //    //if (!gameObject.GetComponent<CraftingManager>().craftedItemDragged)
+        //    //    currentlyDraggedItemIndex = index;
+
+        //    //Debug.Log(index);
+        //    //Debug.Log(currentlyDraggedItemIndex);
+
+        //    //Debug.Log(index);
+        //    //Debug.Log("C off");
+        //    //if (index == -1)
+        //    //{
+        //    //    return;
+        //    //}
+        //    OnItemActionRequested?.Invoke(currentlyDraggedItemIndex, index);
+        //}
 
         private void ResetDraggedItem()
         {
@@ -82,8 +126,8 @@ namespace Inventory.UI
         private void HandleBeginDrag(UIInventoryItem inventoryItemUI)
         {
             int index = listOfUIItems.IndexOf(inventoryItemUI);
-            Debug.Log("Returned!");
-            Debug.Log(index);
+            //Debug.Log("Returned!");
+            //Debug.Log(index);
             if (index == -1)
                 return;
             currentlyDraggedItemIndex = index;
@@ -98,17 +142,18 @@ namespace Inventory.UI
 
         private void HandleItemSelection(UIInventoryItem inventoryItemUI)
         {
-            
+
         }
 
         public void Show()
         {
-            gameObject.SetActive(true);
+            gameObject.transform.parent.gameObject.SetActive(true);
+            gameObject.transform.SetSiblingIndex(gameObject.transform.parent.childCount - 2);
         }
 
         public void Hide()
         {
-            gameObject.SetActive(false);
+            gameObject.transform.parent.gameObject.SetActive(false);
             ResetDraggedItem();
         }
 

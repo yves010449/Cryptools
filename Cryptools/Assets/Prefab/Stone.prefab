@@ -10,8 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 401071440121589620}
   - component: {fileID: 401071440121589623}
+  - component: {fileID: -5860832359185195685}
   - component: {fileID: 401071440121589622}
   - component: {fileID: 401071440887261425}
+  - component: {fileID: 5224999180544755648}
   - component: {fileID: 401071440121589617}
   m_Layer: 7
   m_Name: Stone
@@ -86,6 +88,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &-5860832359185195685
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401071440121589616}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!70 &401071440121589622
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -99,8 +122,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 2.1612442, y: 1.1197194}
+  m_Offset: {x: 0.017237894, y: -0.0743962}
+  m_Size: {x: 2.17, y: 1.08}
   m_Direction: 1
 --- !u!114 &401071440887261425
 MonoBehaviour:
@@ -114,7 +137,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cb6d1dc31208694abc220e13286b4fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stoneDrop: {fileID: 8267350005876853098, guid: bc6bc914f69c50e41b1e02d621c40a84, type: 3}
+  itemDrop: {fileID: 8267350005876853098, guid: bc6bc914f69c50e41b1e02d621c40a84, type: 3}
+  itemType: {fileID: 11400000, guid: 3edd43c7b495722499b3ef47473cbc9d, type: 2}
+--- !u!114 &5224999180544755648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401071440121589616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a13920f2f0388f4db7270b6f993219e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
 --- !u!95 &401071440121589617
 Animator:
   serializedVersion: 3

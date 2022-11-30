@@ -137,8 +137,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cb6d1dc31208694abc220e13286b4fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemDrop: {fileID: 8267350005876853098, guid: bc6bc914f69c50e41b1e02d621c40a84, type: 3}
-  itemType: {fileID: 11400000, guid: 3edd43c7b495722499b3ef47473cbc9d, type: 2}
+  itemDrop: {fileID: 8267350005876853102, guid: bc6bc914f69c50e41b1e02d621c40a84, type: 3}
+  itemType: {fileID: 11400000, guid: 7b4fdeb44f9ab9345a68b3658f95ee6a, type: 2}
 --- !u!114 &5224999180544755648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a13920f2f0388f4db7270b6f993219e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
+  anim: {fileID: 401071440121589617}
 --- !u!95 &401071440121589617
 Animator:
   serializedVersion: 3

@@ -43,26 +43,25 @@ public class PlayerMovement : MonoBehaviour
                 Debug.Log(hit.transform.gameObject.name);
                 if (hit.transform.gameObject.GetComponent<AIController>() == null)
                 {
-                    if (hit.transform.gameObject.GetComponent<ItemDropBehavior>().GetDrop().Name == "Bandage" &&
+                    if (hit.transform.gameObject.GetComponent<ItemDropBehavior>().GetDrop().ItemImage.name == "Stone" &&
                         this.gameObject.GetComponent<InventoryController>().GetSelectedIndex() == 0)
                     {
                         anim.SetBool("IsMining", true);
                         Debug.Log("Hit!");
                     }
-                    else if (hit.transform.gameObject.GetComponent<ItemDropBehavior>().GetDrop().Name == "Grass" &&
+                    else if (hit.transform.gameObject.GetComponent<ItemDropBehavior>().GetDrop().ItemImage.name == "Wood" &&
                         this.gameObject.GetComponent<InventoryController>().GetSelectedIndex() == 1)
                     {
                         anim.SetBool("IsMining", true);
                         Debug.Log("Hit!");
                     }
-                    else if (hit.transform.gameObject.GetComponent<ItemDropBehavior>().GetDrop().Name == "Tree" &&
-                        this.gameObject.GetComponent<InventoryController>().GetSelectedIndex() == 2)
+                    else if (hit.transform.gameObject.GetComponent<ItemDropBehavior>().GetDrop().ItemImage.name == "Fiber")
                     {
                         anim.SetBool("IsMining", true);
                         Debug.Log("Hit!");
                     }
 
-                    Debug.Log(hit.transform.gameObject.GetComponent<ItemDropBehavior>().GetDrop().Name);
+                    Debug.Log(hit.transform.gameObject.GetComponent<ItemDropBehavior>().GetDrop().ItemImage.name);
                 }
                 else
                 {
@@ -129,6 +128,8 @@ public class PlayerMovement : MonoBehaviour
         {
             mine.Play();
             hit.transform.GetComponent<Animator>().SetFloat("HitPoint", hit.transform.GetComponent<Animator>().GetFloat("HitPoint") - 1f);
+            hit.transform.GetComponent<Animator>().SetTrigger("Hit");
+
         }
         catch (System.Exception)
         {

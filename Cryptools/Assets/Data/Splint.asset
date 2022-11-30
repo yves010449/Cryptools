@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 968379a72e6fc9046b76fa06d4d379ae, type: 3}
+  m_Name: Splint
+  m_EditorClassIdentifier: 
+  <IsStackable>k__BackingField: 0
+  <IsCraftable>k__BackingField: 0
+  <MaxStackSize>k__BackingField: 1
+  <Name>k__BackingField: Splint
+  <ItemImage>k__BackingField: {fileID: 21300000, guid: 6070d67d1cdb5b242bd9ef70ccbfa721, type: 3}
+  <CraftingItems>k__BackingField:
+  - {fileID: 11400000, guid: 3edd43c7b495722499b3ef47473cbc9d, type: 2}
+  - {fileID: 11400000, guid: 775035d907ef6264db0b29d33a7b9924, type: 2}
+  <CraftingAmount>k__BackingField: 0500000005000000
+  <CraftingAvailability>k__BackingField: 0000
+  modifiersData:
+  - statModifier: {fileID: 11400000, guid: baa22420e7bb60746ae9e3c18f5378f0, type: 2}
+    value: 100

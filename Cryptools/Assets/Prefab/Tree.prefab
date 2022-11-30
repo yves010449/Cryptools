@@ -87,7 +87,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 1
+  m_SpriteSortPoint: 0
 --- !u!50 &4367320413659986786
 Rigidbody2D:
   serializedVersion: 4
@@ -122,8 +122,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.06557119, y: -0.05828406}
-  m_Size: {x: 1.2141434, y: 0.7408896}
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1.3286607, y: 0.789873}
   m_Direction: 1
 --- !u!114 &1702666985768652488
 MonoBehaviour:
@@ -137,8 +137,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cb6d1dc31208694abc220e13286b4fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemDrop: {fileID: 8267350005876853098, guid: bc6bc914f69c50e41b1e02d621c40a84, type: 3}
-  itemType: {fileID: 11400000, guid: ee5131c84281b9e41a31d144ccbe24c4, type: 2}
+  itemDrop: {fileID: 8267350005876853102, guid: bc6bc914f69c50e41b1e02d621c40a84, type: 3}
+  itemType: {fileID: 11400000, guid: 775035d907ef6264db0b29d33a7b9924, type: 2}
 --- !u!114 &6535602470213050873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,12 +146,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1702666985007302985}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9a13920f2f0388f4db7270b6f993219e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
+  anim: {fileID: 1702666985007302984}
 --- !u!95 &1702666985007302984
 Animator:
   serializedVersion: 3
@@ -160,9 +160,9 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1702666985007302985}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f2b3aa09756e9344bb3a0293f4545217, type: 2}
+  m_Controller: {fileID: 9100000, guid: a8fd1d13104ffdc4eac55e5b750aaed4, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

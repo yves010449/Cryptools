@@ -94,6 +94,7 @@
     <Compile Include="Assets\Scripts\Inventory\PickUpSystem\PickUpSystem.cs" />
     <Compile Include="Assets\Scripts\Inventory\UI\UIInventoryItem.cs" />
     <Compile Include="Assets\Scripts\NFTSelection\NFTCollectionsSO.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Model\NonConsumableItemSO.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

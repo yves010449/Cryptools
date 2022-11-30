@@ -18,23 +18,23 @@ MonoBehaviour:
     toolType: 0
   - name: Axe Test
     NFT: {fileID: 21300000, guid: b2d8c365456070f4284eaa07b5e690ed, type: 3}
-    toolType: 0
-  - name: Axe Test 2
-    NFT: {fileID: 21300000, guid: b2d8c365456070f4284eaa07b5e690ed, type: 3}
     toolType: 1
-  - name: Hammer Test
-    NFT: {fileID: 21300000, guid: b2d8c365456070f4284eaa07b5e690ed, type: 3}
-    toolType: 2
-  - name: Hammer Test 2
-    NFT: {fileID: 21300000, guid: b2d8c365456070f4284eaa07b5e690ed, type: 3}
+  - name: The Leviathan
+    NFT: {fileID: 21300000, guid: cf1e9453fb0df4d4da7f0524d1b2b835, type: 3}
+    toolType: 1
+  - name: Diamond Pickaxe
+    NFT: {fileID: 21300000, guid: 8cd06a19392294643826fb17f8639eb4, type: 3}
+    toolType: 0
+  - name: Mjolnir
+    NFT: {fileID: 21300000, guid: 2f074dbe997a8d841821562b935ca08a, type: 3}
     toolType: 2
   selectedTools:
+  - name: Diamond Pickaxe
+    NFT: {fileID: 21300000, guid: 8cd06a19392294643826fb17f8639eb4, type: 3}
+    toolType: 0
   - name: Axe Test
     NFT: {fileID: 21300000, guid: b2d8c365456070f4284eaa07b5e690ed, type: 3}
-    toolType: 0
-  - name: Axe Test 2
-    NFT: {fileID: 21300000, guid: b2d8c365456070f4284eaa07b5e690ed, type: 3}
     toolType: 1
-  - name: Hammer Test 2
-    NFT: {fileID: 21300000, guid: b2d8c365456070f4284eaa07b5e690ed, type: 3}
+  - name: Mjolnir
+    NFT: {fileID: 21300000, guid: 2f074dbe997a8d841821562b935ca08a, type: 3}
     toolType: 2

@@ -16,9 +16,11 @@ MonoBehaviour:
   <IsCraftable>k__BackingField: 0
   <MaxStackSize>k__BackingField: 20
   <Name>k__BackingField: Bandage
-  <ItemImage>k__BackingField: {fileID: 21300000, guid: e01582ada1f29304c893948e91182599, type: 3}
+  <ItemImage>k__BackingField: {fileID: 21300000, guid: f740d19198f86f54abe1a2d9f3b46f6c, type: 3}
   <CraftingItems>k__BackingField:
   - {fileID: 11400000, guid: ee5131c84281b9e41a31d144ccbe24c4, type: 2}
   <CraftingAmount>k__BackingField: 05000000
   <CraftingAvailability>k__BackingField: 00
-  modifiersData: []
+  modifiersData:
+  - statModifier: {fileID: 11400000, guid: baa22420e7bb60746ae9e3c18f5378f0, type: 2}
+    value: 30

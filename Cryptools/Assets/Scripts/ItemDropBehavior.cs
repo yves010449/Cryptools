@@ -6,7 +6,7 @@ using UnityEngine;
 public class ItemDropBehavior : MonoBehaviour
 {
     [SerializeField]
-    Item itemDrop;
+    GameObject itemDrop;
 
     [SerializeField]
     ItemSO itemType;
@@ -33,7 +33,7 @@ public class ItemDropBehavior : MonoBehaviour
 
     public void SetDrop()
     {
-        itemDrop.SetData(itemType);
+        itemDrop.GetComponent<Item>().SetData(itemType);
     }
 
     public ItemSO GetDrop()

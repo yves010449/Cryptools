@@ -21,6 +21,7 @@ public class ItemDropBehavior : MonoBehaviour
 
     public void DropItem()
     {
+        SetDrop();
         for (int i = 0; i < Random.Range(8, 15); i++)
         {
             Vector2 pos = this.transform.position;

@@ -86,12 +86,12 @@ public class AIController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        tempSpeed = speed;
+        //tempSpeed = speed;
         //Debug.Log("cOLL");
         if (collision.gameObject.name == "Player")
         {
-            anim.SetBool("IsMoving", false);
-            speed = 0;
+            //anim.SetBool("IsMoving", false);
+            //speed = 0;
             StartCoroutine(Attack(collision));
         }
     }
@@ -133,7 +133,7 @@ public class AIController : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        speed = tempSpeed;
+        //speed = tempSpeed;
         StopAllCoroutines();
     }
 

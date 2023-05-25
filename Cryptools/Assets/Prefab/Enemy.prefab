@@ -62,7 +62,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1113080382580839827, guid: fb7ae410cd8068242be63f51353a7510, type: 3}
-  speed: 2
+  speed: 1
   detectionDistance: 4
   anim: {fileID: 2078418142708193746}
   combat: {fileID: 2047657685}
@@ -180,8 +180,8 @@ SpriteRenderer:
   m_SortingLayerID: -975245515
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 74f923feff5b98347a38acc8b08dc527, type: 3}
-  m_Color: {r: 1, g: 0.3160377, b: 0.34787342, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 311e264bc582d874daf2df3c806c0507, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

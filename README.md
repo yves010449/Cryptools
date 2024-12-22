@@ -9,3 +9,8 @@ To run this project locally, follow these steps:
 - Switch branch to "Main-2"
 - Clone repository
 - Open using Unity Hub
+
+  OR
+
+Open link to run build
+Itch.io: https://akosihectorlols.itch.io/cryptools

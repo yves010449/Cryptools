@@ -12,5 +12,4 @@ To run this project locally, follow these steps:
 
   OR
 
-Open link to run build
-Itch.io: https://akosihectorlols.itch.io/cryptools
+Open link to run build in Itch.io: https://akosihectorlols.itch.io/cryptools
